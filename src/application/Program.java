@@ -19,16 +19,18 @@ public class Program {
 		Seller seller = sellerDao.findById(3);
 
 		System.out.println(seller);
-		
+		System.out.println();
 		System.out.println("=========== Test 2: seller findByDepartment ========");
 		
 		Department dep = new Department(2, null);
 		List<Seller>sellers = sellerDao.findByDepartment(dep);
 		
 		sellers.forEach(System.out::println);
+		System.out.println();
 		
+		System.out.println("=========== Test 3: seller findAll ========");
 		
-
+		sellerDao.findAll().forEach(System.out::println);;
 	}
 
 }
