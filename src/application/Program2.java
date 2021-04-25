@@ -9,7 +9,16 @@ public class Program2 {
 		
 		DepartmentDao departmentDao = DaoFactory.createDepartmentDao();
 		
-		departmentDao.findAll().forEach(System.out::println);;
+		
+		System.out.println("============= TEST 1: Department findAll =================");
+		departmentDao.findAll().forEach(System.out::println);
+		
+		
+		System.out.println("\n===============TEST 2: Department findById ===============");
+		System.out.println(departmentDao.findById(2));
+		
+		
+		
 		
 
 	}
